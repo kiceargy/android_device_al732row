@@ -22,10 +22,6 @@ endif
 PRODUCT_PACKAGES += \
     libxlog
 
-# Lights
-#PRODUCT_PACKAGES += \
-#    lights.mt6735m
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
@@ -57,7 +53,6 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/lib/sensors.mt6735m.so:system/lib/hw/sensors.mt6735m.so \
     $(LOCAL_PATH)/proprietary/lib/libMtkOmxVenc.so:system/lib/libMtkOmxVenc.so \
     $(LOCAL_PATH)/proprietary/lib/libvc1dec_sa.ca7.so:system/lib/libvc1dec_sa.ca7.so \
     $(LOCAL_PATH)/proprietary/lib/libvcodec_oal.so:system/lib/libvcodec_oal.so \
@@ -99,9 +94,8 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.conf:system/etc/.tp/thermal.conf \
-     $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-     $(LOCAL_PATH)/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc
-
+     $(LOCAL_PATH)/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf
+     
 ## Ramdisk ##
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/fstab.mt6735:root/fstab.mt6735 \
